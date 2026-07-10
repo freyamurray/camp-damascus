@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sinner repent</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body class="sinner-body crt-filter" onload="randomVerse()">
+    <main onmousemove="playBuzz()">
+        <img id="cursor-fly" src="images/spooky-page/mayfly.png" alt="a mayfly png">
+        <audio id="buzz" src="audio/fly-buzz.mp3"></audio>
+        <audio id="broken-mic" autoplay loop src="audio/broken-mic.wav"></audio>
+        <audio id="horror-glitch" autoplay loop src="audio/horror-glitch.mp3"></audio>
+        <audio id="radio-glitch" autoplay loop src="audio/radio-glitch.wav"></audio>
+        <audio id="radio-tuning" autoplay loop src="audio/radio-tuning.mp3"></audio>
+        <audio id="vcr-static" autoplay loop src="audio/vcr-static.wav"></audio>
+
+        <div class="verse">
+            <p class="verse-text" id="bible-verse"></p>
+        </div>
+    </main>
+</body>
+</html>
