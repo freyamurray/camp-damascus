@@ -140,7 +140,7 @@ small > i > a {
   }
 }
 
-.enter:focus {
+.enter:focus, .enter:hover {
   animation: pulse 1.5s infinite;
   box-shadow: rgb(137, 200, 255) 0px 0px 10px;
 }
@@ -227,7 +227,7 @@ small > i > a {
     transition-duration: .3s;
 }
 
-.back-to-top > a:focus {
+.back-to-top > a:focus, .back-to-top > a:hover {
     scale: 1.08;
 }
 
@@ -255,7 +255,7 @@ small > i > a {
   transition-duration: 0.2s;
 }
 
-.book-button:focus {
+.book-button:focus, .book-button:hover {
   color: var(--text);
   background-color: var(--accent-bg);
 }
