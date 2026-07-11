@@ -73,9 +73,11 @@ function toggleNav() {
 
     if (!mobileNav) return;
 
-    if (mobileNav.style.marginTop === "0px") {
-        mobileNav.style.marginTop = "-300px"
+    mobileNav.classList.toggle("is-open")
+
+    if (mobileNav.classList.contains("is-open")) {
+        mobileNav.ariaHidden = "false"; mobileNav.ariaExpanded = "true"
     } else {
-        mobileNav.style.marginTop = "0px";
+        mobileNav.ariaHidden = "true"; mobileNav.ariaExpanded = "false"
     }
 }

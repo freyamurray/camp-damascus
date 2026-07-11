@@ -27,9 +27,12 @@
             <a href="#donate">Donate</a> |
             <a href="sinner.html">Attend</a>
         </nav>
-        <i class="fa-solid fa-bars" id="hb-menu" onclick="toggleNav()"></i>
+        <button id="hb-menu" type="button" onclick="toggleNav()" aria-label="open menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
     </header>
-    <nav class="mobile-nav" id="mobile-nav">
+    <nav class="mobile-nav" id="mobile-nav" aria-hidden="true" aria-expanded="false">
         <a href="#about">About</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#schedule">Schedule</a>
@@ -37,8 +40,12 @@
         <a href="sinner.html" style="border-bottom: none;">Attend</a>
     </nav>
     <main>
-        <div class="wrapper" id="hero-section">
-            <img class="hero-image" src="images/camp-site/bunks.jpg" alt="">
+        <div class="back-to-top">
+            <a href="#hero-section"><i class="fa-solid fa-angle-up" aria-label="back to top"></i></a>
+        </div>
+        <section class="wrapper" id="hero-section">
+            <img class="hero-image" src="images/camp-site/bunks.jpg"
+                alt="three summer camp cabins on a manicured lawn against the backdrop of a pine forest on a sunny day">
             <div class="text" id="hero-text">
                 <h1>Love in His image this summer</h1>
                 <p>Does the temptation of <i>unnatural lust</i> have a hold on you or someone you love? Has someone in
@@ -53,9 +60,9 @@
                     effective reparative summer camp in God's United States, boasting a <i><b>100% success rate!</b></i>
                     With our help, your child can love in a God honoring way again.</p>
             </div>
-        </div>
-        <blockquote class="accent">"A life free of sin is waiting for you at Camp Damascus"</blockquote>
-        <div class="wrapper" id="about">
+        </section>
+        <blockquote class="accent" id="quote-1">"A life free of sin is waiting for you at Camp Damascus"</blockquote>
+        <section class="wrapper" id="about">
             <div class="text" id="about-text">
                 <h1>About our Founder</h1>
                 <p>Since 2010, Pastor Pete Bend's mission has been to enable young people to resist the tempation of
@@ -66,17 +73,18 @@
                 <p>Pastor Bend takes his expertise in business, earned from his successful career in Silicon Valley, and
                     applies that to his work at Camp Damascus. As a disciple of the Kingdom of the Pine, Pastor Bend's
                     method holds Prophet Tobias Cobel's four holy tenets at its core:</p>
-                <blockquote>Respect, Integrity, Service, Excellence</blockquote>
+                <blockquote id="quote-2">Respect, Integrity, Service, Excellence</blockquote>
                 <p>With these tenets, Pastor Bend has successfully guided thousands of young people away from the
                     temptation of a homosexual lifestyle. None have ever reverted to their previous condition, and all
                     now walk with Pastor Bend in the Light of the Lord.</p>
             </div>
             <figure>
-                <img src="images/camp-site/pastor-bend.jpg" alt="Pastor Pete Bend">
+                <img src="images/camp-site/pastor-bend.jpg"
+                    alt="Pastor Pete Bend, a white man in his mid thirties, smiling wearing a blue sweater.">
                 <figcaption>Pastor Pete Bend</figcaption>
             </figure>
-        </div>
-        <div class="wrapper accent" id="testimonials">
+        </section>
+        <section class="wrapper accent" id="testimonials">
             <h1>Testimonials</h1>
             <div class="testimonial-carousel">
                 <div class="testimonial item1" id="testimonial-1">
@@ -109,9 +117,10 @@
                     <h2>Sonia and Christopher Green, Neverton, MT</h2>
                 </div>
             </div>
-        </div>
-        <div class="wrapper" id="schedule">
-            <img src="images/camp-site/bible-study.jpg" alt="">
+        </section>
+        <section class="wrapper" id="schedule">
+            <img src="images/camp-site/bible-study.jpg"
+                alt="A pair of hands hold a Bible against a backdrop of a body of water on a sunny day.">
             <div class="text" id="schedule-text">
                 <h1>Sample Schedule</h1>
                 <p>While no two days at Camp Damascus are the same, we structure each day around deepening campers'
@@ -131,8 +140,8 @@
                     <li>Campfire songs</li>
                 </ul>
             </div>
-        </div>
-        <div class="wrapper" id="donate">
+        </section>
+        <section class="wrapper" id="donate">
             <div class="text" id="donate-text">
                 <h1>Donate to Camp Damascus</h1>
                 <p>
@@ -145,21 +154,30 @@
                 <p>Your donations make it possible for us to take in young people from disadvantaged backgrounds who are
                     straying from Christ, giving them the opportunity to <i>love right.</i></p>
             </div>
-            <img src="images/camp-site/jesus-died.jpg" alt="">
-        </div>
-        <a class="book-button" href="sinner.html">Donate to Camp Damascus Today</a>
+            <img src="images/camp-site/jesus-died.jpg"
+                alt="Four teenage boys stand with their backs to the camera, their arms around each others shoulders. The are looking at a large wooden cross carved with the words `JESUS DIED FOR ME!`">
+        </section>
+        <a class="book-button" href="sinner.html" onmouseover="playBuzz()" onmouseleave="stopBuzz()">Donate to Camp
+            Damascus Today</a>
     </main>
     <footer>
-        <p>
-            <small>
-                This website is a transformative work based on <i>Camp Damascus</i> by Chuck Tingle. 
-            </small>
-        </p>
-        <p>
-            <small>
-                Designed and coded by <a style="text-decoration: underline;" href="https://github.com/freyamurray">Freya Murray</a> 2026. If you enjoyed my little project, please consider <a  style="text-decoration: underline;" href="https://ko-fi.com/7reya">buying me a kofi!</a>
-            </small>
-        </p>
+        <div class="footer-content">
+            <p>
+                <small>
+                    This website is a transformative work based on <i><a
+                            href="https://read.macmillan.com/torforge/sdccannouncement/">Camp Damascus</a></i> by <a
+                        href="https://www.tumblr.com/drchucktingle/">Chuck Tingle</a>.
+                </small>
+            </p>
+            <p>
+                <small>
+                    Designed and coded by <a href="https://github.com/freyamurray">Freya Murray</a> 2026. If you enjoyed
+                    my little project,
+                    please consider <a href="https://ko-fi.com/7reya">buying me a
+                        kofi!</a>
+                </small>
+            </p>
+        </div>
     </footer>
 </body>
 <audio id="buzz" src="audio/fly-buzz.mp3"></audio>
